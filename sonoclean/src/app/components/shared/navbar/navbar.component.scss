@@ -1,66 +1,119 @@
 @import "../../../../styles.scss";
+
+// .myHeaderTop {
+//     height: 100vh;
+//     width: 100%;
+// }
+
+.menu-area {
+    position: static;
+}
+.mega-area {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+}
+.dropdown-item {
+    padding: 5px 0;
+}
+
 .logo {
-    width: 160px;
-}
-.navbar-dark .navbar-nav .active>.nav-link {
-    color: $turquoise;
-}
-.hidden {
-    display: none;
-    opacity: 0;
-}
-.show {
-    display: block;
-    opacity: 1;
-    -webkit-animation-name: fadeIn;
-    -webkit-animation-duration: 0.2s;
-    animation-name: fadeIn;
-    animation-duration: 0.2s;
-}
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
+    @media (max-width: 992px) {
+        width: 140px;
     }
-    20% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0.3;
-    }
-    60% {
-        opacity: 0.5;
-    }
-    80% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 1;
+    @media (min-width: 992px) {
+        width: 160px;
     }
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    @media (min-width: 992px) {
+        // position: sticky;
+        // width: 99vw;
+        // left: -160px;
     }
-    20% {
-        opacity: 0;
-    }
-    40% {
-        opacity: 0.3;
-    }
-    60% {
-        opacity: 0.5;
-    }
-    80% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 1;
-    }
+}
+.nav-link {
+    color: $dark;
+}
+.nav-link {
+    @include nav-links;
 }
 
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .dropdown-menu {
-        position: sticky;
-    }
+.dropdown-toggle::before {
+    position: absolute;
+    content    : '';
 }
+.dropdown-toggle::after {
+    position: absolute;
+    content    : '\f078';
+    font-family: 'FontAwesome';
+    // right      : 20px;
+    top        : calc(50% - 1.25em);
+    transition : all ease-in 0.2s;
+    cursor     : pointer;
+}
+
+/* Transition */
+.dropdown-toggle:hover::after {
+    color    : $turquoise;
+    transform: rotateX(-180deg);
+    cursor   : pointer;
+}
+
+
+// .hidden {
+//     display: none;
+//     opacity: 0;
+// }
+// .show {
+//     display: block;
+//     opacity: 1;
+//     -webkit-animation-name: fadeIn;
+//     -webkit-animation-duration: 0.2s;
+//     animation-name: fadeIn;
+//     animation-duration: 0.2s;
+// }
+// @-webkit-keyframes fadeIn {
+//     0% {
+//         opacity: 0;
+//     }
+//     20% {
+//         opacity: 0;
+//     }
+//     40% {
+//         opacity: 0.3;
+//     }
+//     60% {
+//         opacity: 0.5;
+//     }
+//     80% {
+//         opacity: 0.9;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes fadeIn {
+//     0% {
+//         opacity: 0;
+//     }
+//     20% {
+//         opacity: 0;
+//     }
+//     40% {
+//         opacity: 0.3;
+//     }
+//     60% {
+//         opacity: 0.5;
+//     }
+//     80% {
+//         opacity: 0.9;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }
