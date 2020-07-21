@@ -1,2 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
-// @import "~bootstrap/dist/css/boostrap.css";
+// Colors
+$dark: #516a7c;
+$turquoise: #4bbab5;
+
+// Selector
+::selection {
+    color: white;
+    background: $turquoise;
+}
+
+// Correction Default Styles
+button:focus {
+    outline: none;
+    outline: none;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+    outline: -ms-focus-ring-color auto 0px;
+    outline: -o-focus-ring-color auto 0px;
+    outline: -moz-focus-ring-color auto 0px;
+}
+
+// Common Styles
+body {
+    font-family: "Gotham", Arial, Helvetica, sans-serif !important;
+    color: $dark;
+}
